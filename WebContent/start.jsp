@@ -45,7 +45,7 @@
 <!-- 네이버아이디api start-->
 
     <div id="about" class="container-fluid pb-creativity-everything">
-        <h2 class="text-center">페이스북로그인api</h2>
+        <h2 class="text-center">페이스북로그인api2222</h2>
         <button class="login"><a href="http://localhost:8080/test1/rateAnal.jsp">페이스북로그인</a></button>
     </div>
 
