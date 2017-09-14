@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Creativity Theme</title>
+    <title>MOVIE MOVE</title>
 
     <link id="themecss" rel="stylesheet" type="text/css" href="https://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -35,21 +35,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Creativity is everything!</a>
+                <a class="navbar-brand" href="http://localhost:8080/test1/start.jsp">MM(로고자리)</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="div-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class="smooth-scroll" href="#about">About</a></li>
-                    <li><a class="smooth-scroll" href="#services">Services</a></li>
-                    <li><a class="smooth-scroll" href="#portfolio">Portfolio</a></li>
-                    <li><a class="smooth-scroll" href="#contact_us">Contact us</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 <!-- 내비게이터 end -->
 
@@ -57,7 +45,7 @@
 
     <div id="about" class="container-fluid pb-creativity-everything">
         <h2 class="text-center">페이스북로그인api</h2>
-        <button class="btn btn-info">페이스북로그인</button>
+        <button class="login"><a href="http://localhost:8080/test1/rateAnal.jsp">페이스북로그인</a></button>
     </div>
 
 
