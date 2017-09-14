@@ -16,6 +16,7 @@
     <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA98pJjB1CLdBflk3PaYUUCad6zDGWIWfE&callback=initMap"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    
 </head>
 
 

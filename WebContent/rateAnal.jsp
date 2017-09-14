@@ -16,6 +16,14 @@
     <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA98pJjB1CLdBflk3PaYUUCad6zDGWIWfE&callback=initMap"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+  <script src="js/morris.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+  <script src="js/example.js"></script>
+  <link rel="stylesheet" href="css/example.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+  <link rel="stylesheet" href="css/morris.css">
 </head>
 
 
@@ -55,37 +63,22 @@
 
 <!-- 별점평가 start-->
 
-<div id="portfolio" class="pb-creativity-gallery">
-        <div class="container-fluid">
-            <div class="row pb-creativity-no-gutter">
-                <div class="col-md-4">
-                    <img src="img/gallery1.jpg" class="img-responsive" alt="">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="img/4.jpeg" class="img-responsive" alt="">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="img/gallery3.jpg" class="img-responsive" alt="">
-                </div>
-            </div>
-            <div class="row pb-creativity-no-gutter">
-                <div class="col-md-4">
-                    <img src="img/5.jpeg" class="img-responsive" alt="">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="img/6.jpeg" class="img-responsive" alt="">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="img/7.jpeg" class="img-responsive" alt="">
-                </div>
-            </div>
-
-        </div>
-    </div>
+<h1>Donut Chart</h1>
+<div id="graph"></div>
+<pre id="code" class="prettyprint linenums">
+Morris.Donut({
+  element: 'graph',
+  data: [
+    {value: 70, label: 'foo'},
+    {value: 15, label: 'bar'},
+    {value: 10, label: 'baz'},
+    {value: 5, label: 'A really really long label'}
+  ],
+  formatter: function (x) { return x + "%"}
+}).on('click', function(i, row){
+  console.log(i, row);
+});
+</pre>
 
 <!-- 별점평가 end-->
 
