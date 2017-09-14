@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MOVIE MOVE</title>
+    <title>MoveMovie!</title>
 
     <link id="themecss" rel="stylesheet" type="text/css" href="https://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -16,11 +16,7 @@
     <script type="text/javascript" src="https://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA98pJjB1CLdBflk3PaYUUCad6zDGWIWfE&callback=initMap"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    
 </head>
-
-
-
 
 
 
@@ -36,17 +32,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://localhost:8080/test1/start.jsp">MM(로고자리)</a>
+                <a class="navbar-brand" href="#">MoveMovie!</a>
             </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="div-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="smooth-scroll" href="#Home">Home</a></li>
+                    <li><a class="smooth-scroll" href="#rateEval">평가하기</a></li>
+                    <li><a class="smooth-scroll" href="#rateRecommend">추천받기</a></li>
+                    <li><a class="smooth-scroll" href="#rateAnal">분석받기</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
     </nav>
 <!-- 내비게이터 end -->
 
 <!-- 네이버아이디api start-->
 
-    <div id="about" class="container-fluid pb-creativity-everything">
-        <h2 class="text-center">페이스북로그인api2222</h2>
-        <button class="login"><a href="http://localhost:8080/test1/rateAnal.jsp">페이스북로그인</a></button>
+    <div id="Home" class="container-fluid pb-creativity-everything">
+        <h2 class="text-center">네이버아이디api</h2>
+        <button class="btn btn-info">네이버로그인</button>
     </div>
 
 

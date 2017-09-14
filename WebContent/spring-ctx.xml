@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 경로의 하위 패키지들을 자동으로 탐색 후 component를 찾아주는 코드 -->
+<!-- <context:component-scan base-package="kr.co.acorn.*"></context:component-scan> -->
+
+<!-- <mvc:annotation-driven/> -->
+
+<!-- mysql로 디비를 만들었으니 이걸 수정해 주어야 합니당.
+
+<bean id="deptDAO" class="kr.co.acorn.dao.DeptOracleDao">
+	<property name="ss"  ref="sqlSessionTemplate"></property>
+</bean>
+
+<bean id="dept" class="kr.co.acorn.controller.DeptController">
+	<property name="dao" ref="deptDAO"></property>
+</bean>
+ -->
+ 
+<!-- 위에 component-scan이 있기 때문에 주석처리해도 괜찮음 -->
+<!-- <bean id="hello" class="kr.co.acorn.controller.HelloController"></bean> -->
+
+
+<bean id="property" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location" value="/WEB-INF/db.properties"></property>
+ </bean>
+ 
+ <!-- data source -->
+ <!-- sqlMapConfig에 쓰던걸 여기에 새롭게 쓰게 되었당. -->
+<bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp2.BasicDataSource">
+	<property name="driverClassName" value="${driver}"/>
+	<property name="url" value="${url}"/>
+	<property name="username" value="${username}"/>
+	<property name="password" value="${password}"/>
+</bean>
+
+<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+	 <property name="dataSource" ref="dataSource"/>
+	 <property name="configLocation" value="/WEB-INF/sqlMapConfig.xml"></property>
+</bean>
+
+<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+	<constructor-arg ref="sqlSessionFactoryBean"/>
+</bean>
+
+
+<!-- 
+<mvc:view-resolvers>
+	<mvc:jsp prefix="/WEB-INF/views/" suffix=".jsp"/>
+</mvc:view-resolvers>
+
+
+<mvc:default-servlet-handler/>
+ -->
+
+</beans>
